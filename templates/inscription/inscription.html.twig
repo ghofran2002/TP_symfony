@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<form method="POST" action="{{ path('app_inscription') }}">
+    <table>
+        <tr>
+            <td><label for="username">Nom d'utilisateur :</label></td>
+            <td><input type="text" id="username" name="username" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email :</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Mot de passe :</label></td>
+            <td><input type="password" id="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td><label for="confirm_password">Confirmer le mot de passe :</label></td>
+            <td><input type="password" id="confirm_password" name="confirm_password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><button type="submit">S'inscrire</button></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}
